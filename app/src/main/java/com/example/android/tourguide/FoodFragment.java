@@ -55,24 +55,9 @@ public class FoodFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(places);
+        RecyclerAdapter adapter = new RecyclerAdapter(this,places);
 
         recyclerView.setAdapter(adapter);
-
-//        ImageView imageView = rootView.findViewById(R.id.map_image_view);
-//        imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Toast.makeText(getActivity(), "Malaka", Toast.LENGTH_SHORT).show();
-//
-//                // Creates an Intent that will load a map of San Francisco
-//                Uri gmmIntentUri = Uri.parse("geo:37.650218, -24.024594");
-//                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-//                mapIntent.setPackage("com.google.android.apps.maps");
-//                    startActivity(mapIntent);
-//            }
-//        });
 
         return rootView;
     }

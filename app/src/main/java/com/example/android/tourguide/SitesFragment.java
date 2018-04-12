@@ -56,7 +56,7 @@ public class SitesFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(places);
+        RecyclerAdapter adapter = new RecyclerAdapter(this, places);
 
         recyclerView.setAdapter(adapter);
 

@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -24,9 +23,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         TextView personName;
         TextView infoTextView;
+        ImageView mapImageView;
         ImageView personPhoto;
         View details;
-        ImageView mapImageView;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -35,24 +34,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             personPhoto = itemView.findViewById(R.id.person_photo);
             details = itemView.findViewById(R.id.details_layout);
             mapImageView = itemView.findViewById(R.id.map_image_view);
-            mapImageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
-                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                    mapIntent.setPackage("com.google.android.apps.maps");
-                    startActivity(mapIntent);
 
-                }
-            });
         }
 
     }
 
     private List<Place> places;
+    private FoodFragment fragmentf;
+    private SitesFragment fragments;
 
-    RecyclerAdapter(List<Place> places){
+    public RecyclerAdapter( FoodFragment fragmentF, List<Place> places){
         this.places = places;
+        this.fragmentf = fragmentF;
+    }
+
+    public RecyclerAdapter( SitesFragment fragmentS, List<Place> places){
+        this.places = places;
+        this.fragments = fragmentS;
     }
 
     @NonNull
@@ -82,6 +80,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 mExpandedPosition = isExpanded ? -1:viewHolder.getAdapterPosition();
                 notifyItemChanged(previousExpandedPosition);
                 notifyItemChanged(viewHolder.getAdapterPosition());
+            }
+        });
+
+        viewHolder.mapImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                fragmentf.startActivity(mapIntent);
+
             }
         });
 
