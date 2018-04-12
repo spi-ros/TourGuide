@@ -1,39 +1,58 @@
 package com.example.android.tourguide;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
+    private int mExpandedPosition = -1;
+    int previousExpandedPosition = -1;
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
 
-        CardView cv;
+    static class ViewHolder extends RecyclerView.ViewHolder{
+
         TextView personName;
-        TextView personAge;
+        TextView infoTextView;
         ImageView personPhoto;
+        View details;
+        ImageView mapImageView;
 
         ViewHolder(View itemView) {
             super(itemView);
-            cv = itemView.findViewById(R.id.cv);
             personName = itemView.findViewById(R.id.person_name);
-            personAge = itemView.findViewById(R.id.person_age);
+            infoTextView = itemView.findViewById(R.id.info_text_view);
             personPhoto = itemView.findViewById(R.id.person_photo);
+            details = itemView.findViewById(R.id.details_layout);
+            mapImageView = itemView.findViewById(R.id.map_image_view);
+            mapImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+
+                }
+            });
         }
+
     }
 
-    private List<Person> persons;
+    private List<Place> places;
 
-    RecyclerAdapter(List<Person> persons){
-        this.persons = persons;
+    RecyclerAdapter(List<Place> places){
+        this.places = places;
     }
 
     @NonNull
@@ -44,16 +63,33 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        viewHolder.personName.setText(persons.get(position).getName());
-        viewHolder.personAge.setText(persons.get(position).getAge());
-        viewHolder.personPhoto.setImageResource(persons.get(position).getPhotoId());
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
+        viewHolder.personName.setText(places.get(position).getTitle());
+        viewHolder.infoTextView.setText(places.get(position).getInformation());
+        viewHolder.personPhoto.setImageResource(places.get(position).getPhoto());
+
+        final boolean isExpanded = position==mExpandedPosition;
+        viewHolder.details.setVisibility(isExpanded?View.VISIBLE:View.GONE);
+        viewHolder.itemView.setActivated(isExpanded);
+
+        if (isExpanded)
+            previousExpandedPosition = viewHolder.getAdapterPosition();
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mExpandedPosition = isExpanded ? -1:viewHolder.getAdapterPosition();
+                notifyItemChanged(previousExpandedPosition);
+                notifyItemChanged(viewHolder.getAdapterPosition());
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
-        return persons.size();
+        return places.size();
     }
 
     @Override

@@ -31,32 +31,32 @@ public class SitesFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView = inflater.inflate(R.layout.recycler, container, false);
 
-        final ArrayList<Person> persons = new ArrayList<>();
+        final ArrayList<Place> places = new ArrayList<>();
 
-        persons.add(new Person("Gardenia Wilson", "25 years old", R.drawable.gardenia));
-        persons.add(new Person("Orchid Maiss", "23 years old", R.drawable.orchid));
-        persons.add(new Person("Rose Watts", "35 years old", R.drawable.rose));
-        persons.add(new Person("Gardenia Wilson", "25 years old", R.drawable.gardenia));
-        persons.add(new Person("Orchid Maiss", "23 years old", R.drawable.orchid));
-        persons.add(new Person("Rose Watts", "35 years old", R.drawable.rose));
-        persons.add(new Person("Gardenia Wilson", "25 years old", R.drawable.gardenia));
-        persons.add(new Person("Orchid Maiss", "23 years old", R.drawable.orchid));
-        persons.add(new Person("Rose Watts", "35 years old", R.drawable.rose));
+        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
 
-        // Sort persons Alphabetically by Age
-        Collections.sort(persons, new Comparator<Person>() {
+        // Sort places Alphabetically by Age
+        Collections.sort(places, new Comparator<Place>() {
             @Override
-            public int compare(Person p1, Person p2) {
-                return p1.getAge().compareToIgnoreCase(p2.getAge());
+            public int compare(Place p1, Place p2) {
+                return p1.getInformation().compareToIgnoreCase(p2.getInformation());
             }
         });
 
-        RecyclerView recyclerView = rootView.findViewById(R.id.rv);
+        RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(persons);
+        RecyclerAdapter adapter = new RecyclerAdapter(places);
 
         recyclerView.setAdapter(adapter);
 

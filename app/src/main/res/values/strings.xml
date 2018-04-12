@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Tour Guide</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_temple_of_poseidon">The temple of Poseidon at Sounion  was constructed in 444–440 BC.
+         This was during the ascendancy of the Athenian statesman Pericles</string>
+
+
 </resources>
