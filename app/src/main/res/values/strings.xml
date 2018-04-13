@@ -3,6 +3,19 @@
 
     <string name="info_temple_of_poseidon">The temple of Poseidon at Sounion  was constructed in 444–440 BC.
          This was during the ascendancy of the Athenian statesman Pericles</string>
+    <string name="info_acropolis_of_athens">The Acropolis of Athens is an ancient citadel located on a rocky outcrop above the city of Athens and contains the remains of several ancient buildings of great architectural and historic significance, the most famous being the Parthenon.</string>
+    <string name="info_odeon_herodes_atticus">The Odeon of Herodes Atticus is a stone theatre structure located on the southwest slope of the Acropolis of Athens, Greece. The building was completed in 161 AD and then renovated in 1950</string>
+    <string name="info_agora_of_athens">The Ancient Agora of Classical Athens is the best-known example of an ancient Greek agora. Located to the northwest of the Acropolis, Agora was the heart of ancient Athens, the focus of political, commercial, administrative and social activity, the religious and cultural center and the seat of justice.</string>
+    <string name="temple_of_poseidon">Temple of Poseidon</string>
+    <string name="acropolis_of_athens">Acropolis of Athens</string>
+    <string name="odeon_of_herodes_atticus">Odeon of Herodes Atticus</string>
+    <string name="ancient_agora_of_athens">Ancient Agora of Athens</string>
+    <string name="monastiraki">Monastiraki</string>
+    <string name="info_monastiraki">Lively Monastiraki is known for iconic landmarks including the ruins of Hadrian’s Library, the Ancient Agora and the rebuilt Stoa of Attalos, with a museum exhibiting Athenian artifacts. Monastiraki Flea Market is a jumble of shops selling artisanal soaps, handmade sandals and souvenir T-shirts. The surrounding streets are crammed with traditional tavernas and restaurants, many with Acropolis views.</string>
+    <string name="kerameikos">Kerameikos</string>
+    <string name="info_kerameikos">A short (walkable) distance from the main concentration of ancient sites just north-west of the Acropolis, is the oldest and largest Attic cemetery of Kerameikos. This was one of the largest districts of ancient Athens, and it was here that producers of the iconic ‘Attic vases’ lived and worked. The large archaeological site, with remains of the Sacred Way is complemented by an exceptional museum that shows the changing customs and rituals associated with death and burial.</string>
+    <string name="temple_of_olympian_zeus">Temple of Olympian Zeus</string>
+    <string name="info_olympian_zeus">Although the colossal Temple of Olympian Zeus can be seen from the street – after all it is one of the largest Classical temples, this is one monument that definitely should be experienced up close. When completed by Hadrian in the 2nd century AD there were 104 columns that made up the temple. Of these, only 16 remain standing today. Besides the temple, there are many other remains on site, including those of a Roman bath house, a basilica, various residences and the remains of the city’s walls.</string>
 
 
 </resources>

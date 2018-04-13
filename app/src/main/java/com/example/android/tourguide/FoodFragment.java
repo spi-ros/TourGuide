@@ -32,15 +32,15 @@ public class FoodFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place("Gardenia Wilson", getString(R.string.info_temple_of_poseidon), R.drawable.temple_of_poseidon));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon));
+        places.add(new Place("Gardenia Wilson", "Tipota", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
 
         // Sort places Alphabetically by Name
         Collections.sort(places, new Comparator<Place>() {
@@ -55,7 +55,7 @@ public class FoodFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(this,places);
+        RecyclerAdapter adapter = new RecyclerAdapter(this, places);
 
         recyclerView.setAdapter(adapter);
 
