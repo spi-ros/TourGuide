@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="elevation_12">12dp</dimen>
+    <dimen name="elevation_24">24dp</dimen>
+    <dimen name="elevation_6">6dp</dimen>
 </resources>

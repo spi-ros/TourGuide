@@ -32,15 +32,21 @@ public class FoodFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place("Gardenia Wilson", "Tipota", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Gardenia Wilson", "25 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Orchid Maiss", "23 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
-        places.add(new Place("Rose Watts", "35 years old", R.drawable.temple_of_poseidon, "geo:37.988039, 23.693348?z=17"));
+        places.add(new Place(getString(R.string.place_telaro), getString(R.string.info_telaro), R.drawable.telaro,
+                getString(R.string.geo_telaro),getString(R.string.phone_telaro), "fragmentF", getString(R.string.link_telaro), getString(R.string.food_tag_1)));
+
+        places.add(new Place(getString(R.string.place_trata), getString(R.string.info_trata), R.drawable.trata, getString(R.string.geo_trata),
+                getString(R.string.phone_trata), "fragmentF", getString(R.string.link_trata), getString(R.string.food_tag_2)));
+
+        places.add(new Place(getString(R.string.place_sushimou), getString(R.string.info_sushimou), R.drawable.sushimou, getString(R.string.geo_sushimou),
+                getString(R.string.phone_sushimou), "fragmentF", getString(R.string.link_sushimou), getString(R.string.food_tag_3)));
+
+        places.add(new Place(getString(R.string.place_vassilenas), getString(R.string.info_vassilenas), R.drawable.vassilenas, getString(R.string.geo_vassilenas),
+                getString(R.string.phone_vassilenas), "fragmentF", getString(R.string.link_vassilenas), getString(R.string.food_tag_4)));
+
+        places.add(new Place(getString(R.string.place_ifeel), getString(R.string.info_ifeel), R.drawable.ifeel, getString(R.string.geo_ifeel),
+                getString(R.string.phone_ifeel), "fragmentF", getString(R.string.link_ifeel), getString(R.string.food_tag_5)));
+
 
         // Sort places Alphabetically by Name
         Collections.sort(places, new Comparator<Place>() {

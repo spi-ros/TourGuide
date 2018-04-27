@@ -1,7 +1,5 @@
 package com.example.android.tourguide;
 
-import android.content.Intent;
-
 public class Place {
 
     private String mTitle;
@@ -10,16 +8,26 @@ public class Place {
 
     private int mPhoto;
 
-    private Intent mIntent;
-
     private String mLocation;
 
-    public Place(String title, String information, int photo, String location) {
+    private String mPhoneNumber;
+
+    private String mTag;
+
+    private String mLink;
+
+    private String mGalleryTag;
+
+    public Place(String title, String information, int photo, String location,
+                 String phoneNumber, String tag, String link, String galleryTag) {
         mTitle = title;
         mInformation = information;
         mPhoto = photo;
         mLocation = location;
-//        mIntent = intent;
+        mPhoneNumber = phoneNumber;
+        mTag = tag;
+        mLink = link;
+        mGalleryTag = galleryTag;
     }
 
     public String getTitle() {
@@ -38,8 +46,20 @@ public class Place {
         return mLocation;
     }
 
-//    public Intent getIntent() {
-//        return mIntent;
-//    }
+    public String getPhoneNumber() {
+        return mPhoneNumber;
+    }
+
+    public String getTag() {
+        return mTag;
+    }
+
+    public String getLink() {
+        return mLink;
+    }
+
+    public String getGalleryTag() {
+        return mGalleryTag;
+    }
 }
 
