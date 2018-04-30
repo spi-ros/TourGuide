@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class CategoryAdapter extends FragmentPagerAdapter {
 
     // Titles of the Tabs.
-    private String tabTitles[] = new String[]{"Sites", "Food"};
+    private String tabTitles[] = new String[]{"Sites", "Food", "Hotels", "General info"};
 
     // Create a new CategoryAdapter object
     public CategoryAdapter(FragmentManager fragmentManager) {
@@ -21,15 +21,19 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new SitesFragment();
-        } else {
+        } else if (position == 1) {
             return new FoodFragment();
+        } else if (position == 2) {
+            return new HotelsFragment();
+        } else {
+            return new GeneralInfoFragment();
         }
     }
 
     // Return the total number of pages.
     @Override
     public int getCount() {
-        return 2;
+        return 4;
     }
 
     @Override

@@ -1,17 +1,17 @@
 package com.example.android.tourguide;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,21 +21,33 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
-    int previousExpandedPosition = -1;
+    int elevation = 12;
+    private int previousExpandedPosition = -1;
     private int mExpandedPosition = -1;
     private List<Place> places;
     private FoodFragment fragmentf;
     private SitesFragment fragments;
-    float elevation = 12;
+    private HotelsFragment fragmenth;
+    private GeneralInfoFragment fragmentg;
 
-    public RecyclerAdapter(FoodFragment fragmentF, List<Place> places) {
+    RecyclerAdapter(FoodFragment fragmentF, List<Place> places) {
         this.places = places;
         this.fragmentf = fragmentF;
     }
 
-    public RecyclerAdapter(SitesFragment fragmentS, List<Place> places) {
+    RecyclerAdapter(SitesFragment fragmentS, List<Place> places) {
         this.places = places;
         this.fragments = fragmentS;
+    }
+
+    RecyclerAdapter(HotelsFragment fragmentH, List<Place> places) {
+        this.places = places;
+        this.fragmenth = fragmentH;
+    }
+
+    RecyclerAdapter(GeneralInfoFragment fragmentG, List<Place> places) {
+        this.places = places;
+        this.fragmentg = fragmentG;
     }
 
     @NonNull
@@ -45,9 +57,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return new ViewHolder(v);
     }
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
+
+        final String tag = places.get(viewHolder.getAdapterPosition()).getTag();
 
         viewHolder.placeImageView.setImageResource(places.get(position).getPhoto());
 
@@ -67,25 +82,32 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 mExpandedPosition = isExpanded ? -1 : viewHolder.getAdapterPosition();
                 notifyItemChanged(previousExpandedPosition);
                 notifyItemChanged(viewHolder.getAdapterPosition());
-                viewHolder.cardView.setCardElevation(elevation);
             }
         });
 
-        viewHolder.mapImageView.setBackgroundResource(R.drawable.ic_place_white);
+        viewHolder.mapImageView.setBackgroundResource(R.drawable.ic_place_black);
+        viewHolder.mapImageView.getBackground().setAlpha(150);
         viewHolder.mapImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String tag = places.get(viewHolder.getAdapterPosition()).getTag();
 
                 Uri gmmIntentUri = Uri.parse(places.get(viewHolder.getAdapterPosition()).getLocation());
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
 
-                if (tag.equals("fragmentS")) {
-                    fragments.startActivity(mapIntent);
-                } else {
-                    fragmentf.startActivity(mapIntent);
+                switch (tag) {
+                    case "fragmentS":
+                        fragments.startActivity(mapIntent);
+                        break;
+                    case "fragmentF":
+                        fragmentf.startActivity(mapIntent);
+                        break;
+                    case "fragmentH":
+                        fragmenth.startActivity(mapIntent);
+                        break;
+                    default:
+                        fragmentg.startActivity(mapIntent);
+                        break;
                 }
             }
         });
@@ -93,33 +115,40 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         viewHolder.mapImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction())
-                {
-                    case MotionEvent.ACTION_DOWN :
-                        viewHolder.mapImageView.setImageResource(R.drawable.ic_place_black);
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        viewHolder.mapImageView.setBackgroundResource(R.drawable.ic_place_white);
                         break;
-                    case MotionEvent.ACTION_UP :
-                        viewHolder.mapImageView.setImageResource(R.drawable.ic_place_white);
+                    case MotionEvent.ACTION_UP:
+                        viewHolder.mapImageView.setBackgroundResource(R.drawable.ic_place_black);
                         break;
                 }
                 return false;
             }
         });
 
-        viewHolder.phoneImageView.setBackgroundResource(R.drawable.ic_phone_white);
+        viewHolder.phoneImageView.setBackgroundResource(R.drawable.ic_phone_black);
+        viewHolder.phoneImageView.getBackground().setAlpha(150);
         viewHolder.phoneImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String tag = places.get(viewHolder.getAdapterPosition()).getTag();
-
                 Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
                 phoneIntent.setData(Uri.parse("tel:" + places.get(viewHolder.getAdapterPosition()).getPhoneNumber()));
 
-                if (tag.equals("fragmentS")) {
-                    fragments.startActivity(phoneIntent);
-                } else {
-                    fragmentf.startActivity(phoneIntent);
+                switch (tag) {
+                    case "fragmentS":
+                        fragments.startActivity(phoneIntent);
+                        break;
+                    case "fragmentF":
+                        fragmentf.startActivity(phoneIntent);
+                        break;
+                    case "fragmentH":
+                        fragmenth.startActivity(phoneIntent);
+                        break;
+                    default:
+                        fragmentg.startActivity(phoneIntent);
+                        break;
                 }
             }
         });
@@ -127,30 +156,32 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         viewHolder.phoneImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction())
-                {
-                    case MotionEvent.ACTION_DOWN :
-                        viewHolder.phoneImageView.setImageResource(R.drawable.ic_phone_black);
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        viewHolder.phoneImageView.setBackgroundResource(R.drawable.ic_phone_white);
                         break;
-                    case MotionEvent.ACTION_UP :
-                        viewHolder.phoneImageView.setImageResource(R.drawable.ic_phone_white);
+                    case MotionEvent.ACTION_UP:
+                        viewHolder.phoneImageView.setBackgroundResource(R.drawable.ic_phone_black);
                         break;
                 }
                 return false;
             }
         });
 
-        viewHolder.galleryImageView.setBackgroundResource(R.drawable.ic_photo_library_white);
+        viewHolder.galleryImageView.setBackgroundResource(R.drawable.ic_photo_library_black);
+        viewHolder.galleryImageView.getBackground().setAlpha(150);
+
+        if (tag.equals("fragmentF") || tag.equals("fragmentH") || tag.equals("fragmentG")) {
+            viewHolder.galleryImageView.setVisibility(View.GONE);
+        }
+
         viewHolder.galleryImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String tag = places.get(viewHolder.getAdapterPosition()).getTag();
-
                 Intent photoIntent = new Intent();
                 photoIntent.setClass(v.getContext(), SecondActivity.class);
                 photoIntent.putExtra("testString", places.get(viewHolder.getAdapterPosition()).getGalleryTag());
-
 
                 if (tag.equals("fragmentS")) {
                     fragments.startActivity(photoIntent);
@@ -164,33 +195,42 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         viewHolder.galleryImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction())
-                {
-                    case MotionEvent.ACTION_DOWN :
-                        viewHolder.galleryImageView.setImageResource(R.drawable.ic_photo_library_black);
-                        break;
-                    case MotionEvent.ACTION_UP :
-                        viewHolder.galleryImageView.setImageResource(R.drawable.ic_photo_library_white);
-                        break;
+                if (tag.equals("fragmentS")) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN:
+                            viewHolder.galleryImageView.setBackgroundResource(R.drawable.ic_photo_library_white);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            viewHolder.galleryImageView.setBackgroundResource(R.drawable.ic_photo_library_black);
+                            break;
+                    }
                 }
                 return false;
             }
         });
 
-        viewHolder.linkImageView.setBackgroundResource(R.drawable.ic_link_white);
+        viewHolder.linkImageView.setBackgroundResource(R.drawable.ic_link_black);
+        viewHolder.linkImageView.getBackground().setAlpha(150);
+
+        if (tag.equals("fragmentG")) {
+            viewHolder.linkImageView.setVisibility(View.GONE);
+        }
+
         viewHolder.linkImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String tag = places.get(viewHolder.getAdapterPosition()).getTag();
 
                 Uri linkUri = Uri.parse(places.get(viewHolder.getAdapterPosition()).getLink());
                 Intent linkIntent = new Intent(Intent.ACTION_VIEW, linkUri);
 
                 if (tag.equals("fragmentS")) {
                     fragments.startActivity(linkIntent);
-                } else {
+                } else if (tag.equals("fragmentF")) {
                     fragmentf.startActivity(linkIntent);
+                } else if (tag.equals("fragmentH")) {
+                    fragmenth.startActivity(linkIntent);
+                } else {
+                    fragmentg.startActivity(linkIntent);
                 }
             }
         });
@@ -198,13 +238,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         viewHolder.linkImageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction())
-                {
-                    case MotionEvent.ACTION_DOWN :
-                        viewHolder.linkImageView.setImageResource(R.drawable.ic_link_black);
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        viewHolder.linkImageView.setBackgroundResource(R.drawable.ic_link_white);
                         break;
-                    case MotionEvent.ACTION_UP :
-                        viewHolder.linkImageView.setImageResource(R.drawable.ic_link_white);
+                    case MotionEvent.ACTION_UP:
+                        viewHolder.linkImageView.setBackgroundResource(R.drawable.ic_link_black);
                         break;
                 }
                 return false;
@@ -231,7 +270,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         ImageView galleryImageView;
         ImageView linkImageView;
         TextView infoTextView;
-        CardView cardView;
+//        CardView cardView;
         LinearLayout hiddenLayout;
 
         ViewHolder(View itemView) {
@@ -243,10 +282,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             phoneImageView = itemView.findViewById(R.id.phone_image_view);
             galleryImageView = itemView.findViewById(R.id.gallery_image_view);
             linkImageView = itemView.findViewById(R.id.link_image_view);
-            cardView = itemView.findViewById(R.id.cv);
+//            cardView = itemView.findViewById(R.id.cv);
             hiddenLayout = itemView.findViewById(R.id.hidden_layout);
-
         }
-
     }
 }

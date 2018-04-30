@@ -53,8 +53,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/padding_12"
-                    android:paddingBottom="@dimen/padding_12"
+                    android:paddingTop="@dimen/padding_16"
+                    android:paddingBottom="@dimen/padding_8"
+                    android:paddingLeft="@dimen/padding_16"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -73,15 +74,13 @@
                         android:id="@+id/gallery_image_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_4"
-                        android:src="@drawable/ic_photo_library_white" />
+                        android:padding="@dimen/padding_4" />
 
                     <ImageView
                         android:id="@+id/link_image_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/padding_4"
-                        android:src="@drawable/ic_link_white" />
+                        android:padding="@dimen/padding_4" />
 
                 </LinearLayout>
 
@@ -90,7 +89,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:padding="8dp"
+                        android:paddingTop="@dimen/padding_8"
+                        android:paddingBottom="@dimen/padding_16"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16"
                         tools:text="duo" />
             </LinearLayout>
         </LinearLayout>

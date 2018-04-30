@@ -1,7 +1,6 @@
 package com.example.android.tourguide;
 
 import android.annotation.TargetApi;
-import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.TabLayout;
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.sliding_tabs);
 
         tabLayout.setupWithViewPager(viewPager);
-
 
         tabLayout.setBackgroundResource(R.color.tabLayout_backGround_color);
         tabLayout.setSelectedTabIndicatorColor(getColor(R.color.tab_indicator));

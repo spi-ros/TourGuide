@@ -1,116 +1,190 @@
 <resources>
-    <string name="app_name">Tour Guide</string>
-
-    <string name="info_temple_of_poseidon">The temple of Poseidon at Sounion  was constructed in 444–440 BC.
-         This was during the ascendancy of the Athenian statesman Pericles</string>
-
-    <string name="info_acropolis_of_athens">The Acropolis of Athens is an ancient citadel located on a rocky
-        outcrop above the city of Athens and contains the remains of several ancient buildings of great architectural
-        and historic significance, the most famous being the Parthenon.</string>
-
-    <string name="info_odeon_herodes_atticus">The Odeon of Herodes Atticus is a stone theatre structure located
-        on the southwest slope of the Acropolis of Athens, Greece. The building was completed in 161 AD and then
-        renovated in 1950</string>
-
-    <string name="info_agora_of_athens">The Ancient Agora of Classical Athens is the best-known example of an
-        ancient Greek agora. Located to the northwest of the Acropolis, Agora was the heart of ancient Athens,
-        the focus of political, commercial, administrative and social activity, the religious and cultural
-        center and the seat of justice.</string>
-
-    <string name="temple_of_poseidon">Temple of Poseidon</string>
-
-    <string name="acropolis_of_athens">Acropolis of Athens</string>
-
-    <string name="odeon_of_herodes_atticus">Odeon of Herodes Atticus</string>
-
-    <string name="ancient_agora_of_athens">Ancient Agora of Athens</string>
-
-    <string name="monastiraki">Monastiraki</string>
-
-    <string name="info_monastiraki">Lively Monastiraki is known for iconic landmarks including the ruins of
-        Hadrian’s Library, the Ancient Agora and the rebuilt Stoa of Attalos, with a museum exhibiting Athenian
-        artifacts. Monastiraki Flea Market is a jumble of shops selling artisanal soaps, handmade sandals and
-        souvenir T-shirts. The surrounding streets are crammed with traditional tavernas and restaurants,
-        many with Acropolis views.</string>
-
-    <string name="kerameikos">Kerameikos</string>
-
-    <string name="info_kerameikos">A short (walkable) distance from the main concentration of ancient sites
-        just north-west of the Acropolis, is the oldest and largest Attic cemetery of Kerameikos. This was
-        one of the largest districts of ancient Athens, and it was here that producers of the iconic ‘Attic vases’
-        lived and worked. The large archaeological site, with remains of the Sacred Way is complemented by an
-        exceptional museum that shows the changing customs and rituals associated with death and burial.</string>
-
-    <string name="temple_of_olympian_zeus">Temple of Olympian Zeus</string>
-
-    <string name="info_olympian_zeus">Although the colossal Temple of Olympian Zeus can be seen from the street
-        after all it is one of the largest Classical temples, this is one monument that definitely should be
-        experienced up close. When completed by Hadrian in the 2nd century AD there were 104 columns that made
-        up the temple. Of these, only 16 remain standing today. Besides the temple, there are many other remains
-        on site, including those of a Roman bath house, a basilica, various residences and the remains of the city’s walls.</string>
+    <string name="app_name">Athens Guide</string>
 
 
-    <string name="geo_poseidon">geo:37.650371, 24.024608?z=17</string>
-    <string name="geo_acropolis">geo:37.971566, 23.725749?z=17</string>
-    <string name="geo_odeon">geo:37.970822, 23.724580?z=17</string>
-    <string name="geo_agora">geo:37.974692, 23.721991?z=17</string>
-    <string name="geo_monastiraki">geo:37.976390, 23.725875?z=17</string>
-    <string name="geo_kerameikos">geo:37.978406, 23.718979?z=17</string>
-    <string name="geo_zeus">geo:37.969325, 23.733089</string>
-    <string name="phone_poseidon">302292039363</string>
-    <string name="phone_odeon">00302103241807</string>
-    <string name="phone_agora">0030103210185</string>
-    <string name="phone_monastiraki">00302103214172</string>
-    <string name="phone_kerameikos">00302103214172</string>
-    <string name="phone_acropolis">00302103214172</string>
-    <string name="phone_zeus">00302103214172</string>
-    <string name="link_poseidon">https://en.wikipedia.org/wiki/Sounion#Temple_of_Poseidon</string>
-    <string name="link_acropolis">https://en.wikipedia.org/wiki/Acropolis_of_Athens</string>
-    <string name="link_odeon">https://en.wikipedia.org/wiki/Odeon_of_Herodes_Atticus</string>
-    <string name="link_agora">https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens</string>
-    <string name="link_monastiraki">https://en.wikipedia.org/wiki/Monastiraki</string>
-    <string name="link_kerameikos">https://en.wikipedia.org/wiki/Kerameikos</string>
-    <string name="link_zeus">https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens</string>
+    <!-- Tags -->
+
     <string name="tag_fragmentS">fragmentS</string>
+    <string name="tag_fragmentF">fragmentF</string>
+    <string name="tag_fragmentH">fragmentH</string>
+    <string name="tag_fragmentG">fragmentG</string>
+
     <string name="sites_tag_1">sites_tag_1</string>
     <string name="sites_tag_2">sites_tag_2</string>
     <string name="sites_tag_3">sites_tag_3</string>
     <string name="sites_tag_4">sites_tag_4</string>
     <string name="sites_tag_5">sites_tag_5</string>
     <string name="sites_tag_6">sites_tag_6</string>
-    <string name="food_tag_5">food_tag_5</string>
-    <string name="food_tag_4">food_tag_4</string>
+
+    <string name="food_tag_1">food_tag_5</string>
+    <string name="food_tag_2">food_tag_4</string>
     <string name="food_tag_3">food_tag_3</string>
-    <string name="food_tag_2">food_tag_2</string>
-    <string name="food_tag_1">food_tag_1</string>
+    <string name="food_tag_4">food_tag_2</string>
+    <string name="food_tag_5">food_tag_1</string>
 
-    <string name="info_telaro">Telaro Tasting Culture is located in the center of Athens, at St. Irene Square,
-        on the busy pedestrian street of Aiolou. It is a coffee and food spot. It gives particular emphasis on
-        the quality of coffee and the way of preparing, accompanying it with wonderful breakfast choices and
-        other flavors for the beverage you choose</string>
+    <string name="hotels_tag_1">hotels_tag_1</string>
+    <string name="hotels_tag_2">hotels_tag_2</string>
+    <string name="hotels_tag_3">hotels_tag_3</string>
+    <string name="hotels_tag_4">hotels_tag_4</string>
+    <string name="hotels_tag_5">hotels_tag_5</string>
 
+    <string name="generalInfo_tag_1">generalInfo_tag_1</string>
+    <string name="generalInfo_tag_2">generalInfo_tag_2</string>
+    <string name="generalInfo_tag_3">generalInfo_tag_3</string>
+    <string name="generalInfo_tag_4">generalInfo_tag_4</string>
+    <string name="generalInfo_tag_5">generalInfo_tag_5</string>
+
+
+    <!-- Sites Places -->
+
+    <string name="info_poseidon">Savor sensational views of Cape Sounion and the sacred Temple of
+        Poseidon. Set out on a thrilling coastal drive along the picturesque Attica Riviera, then
+        marvel at the ruins of the Temple of Poseidon, perched high on the sea cliffs at the tip of
+        the Cape. Learn how the temple was built back in 444 - 440 BC, in honor of the god of the
+        sea; explore the remarkably preserved ruins, including grand marble columns; and gaze out
+        across the Aegean Sea.</string>
+    <string name="phone_poseidon">302292039363</string>
+    <string name="geo_poseidon">geo: 0,0?q= Temple Of Poseidon</string>
+    <string name="link_poseidon">https://en.wikipedia.org/wiki/Sounion#Temple_of_Poseidon</string>
+    <string name="place_poseidon">Temple of Poseidon</string>
+
+    <string name="info_acropolis">The Acropolis of Athens is an ancient citadel located on a rocky
+        outcrop above the city of Athens and contains the remains of several ancient buildings of
+        great architectural and historic significance, the most famous being the Parthenon.</string>
+    <string name="phone_acropolis">00302103214172</string>
+    <string name="geo_acropolis">geo: 0,0?q= Acropolis of Athens</string>
+    <string name="link_acropolis">https://en.wikipedia.org/wiki/Acropolis_of_Athens</string>
+    <string name="place_acropolis">Acropolis of Athens</string>
+
+    <string name="info_odeon">The Odeon of Herodes Atticus is a stone theatre structure located
+        on the southwest slope of the Acropolis of Athens, Greece. The building was completed in
+        161 AD and then renovated in 1950</string>
+    <string name="phone_odeon">00302103241807</string>
+    <string name="geo_odeon">geo: 0,0?q= Odeon of Herodes Atticus</string>
+    <string name="link_odeon">https://en.wikipedia.org/wiki/Odeon_of_Herodes_Atticus</string>
+    <string name="place_odeon">Odeon of Herodes Atticus</string>
+
+    <string name="info_agora">The Ancient Agora of Classical Athens is the best-known example of an
+        ancient Greek agora. Located to the northwest of the Acropolis, Agora was the heart of
+        ancient Athens, the focus of political, commercial, administrative and social activity,
+        the religious and cultural center and the seat of justice.</string>
+    <string name="phone_agora">0030103210185</string>
+    <string name="geo_agora">geo: 0,0?q= Ancient Agora of Athens</string>
+    <string name="link_agora">https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens</string>
+    <string name="place_agora">Ancient Agora of Athens</string>
+
+    <string name="info_monastiraki">Lively Monastiraki is known for iconic landmarks including the
+        ruins of Hadrian’s Library, the Ancient Agora and the rebuilt Stoa of Attalos, with a museum
+        exhibiting Athenian artifacts. Monastiraki Flea Market is a jumble of shops selling
+        artisanal soaps, handmade sandals andsouvenir T-shirts. The surrounding streets are crammed
+        with traditional tavernas and restaurants, many with Acropolis views.</string>
+    <string name="phone_monastiraki">00302103214172</string>
+    <string name="geo_monastiraki">geo: 0,0?q= Monastiraki</string>
+    <string name="link_monastiraki">https://en.wikipedia.org/wiki/Monastiraki</string>
+    <string name="place_monastiraki">Monastiraki</string>
+
+    <string name="info_olympian_zeus">Although the colossal Temple of Olympian Zeus can be seen from
+        the street after all it is one of the largest Classical temples, this is one monument that
+        definitely should be experienced up close. When completed by Hadrian in the 2nd century AD
+        there were 104 columns that made up the temple. Of these, only 16 remain standing today.
+        Besides the temple, there are many other remains on site, including those of a Roman bath
+        house, a basilica, various residences and the remains of the city’s walls.</string>
+    <string name="phone_zeus">00302103214172</string>
+    <string name="geo_zeus">geo:0,0?q= Temple of Olympian Zeus</string>
+    <string name="link_zeus">https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens</string>
+    <string name="place_zeus">Temple of Olympian Zeus</string>
+
+
+    <!-- Food Places -->
+
+    <string name="info_telaro">Telaro Tasting Culture is located in the center of Athens, at
+        St. Irene Square, on the busy pedestrian street of Aiolou. It is a coffee and food spot.
+        It gives particular emphasis on the quality of coffee and the way of preparing, accompanying
+        it with wonderful breakfast choices and other flavors for the beverage you choose</string>
     <string name="phone_telaro">+30 21 0324 3740</string>
-    <string name="geo_telaro">geo:0,0?q= Telaro, Aiolou 33, Athina 105 51, Greece</string>
-    <string name="link_telaro">https://www.tripadvisor.co.uk/Restaurant_Review-g189400-d10595742-Reviews-Telaro-Athens_Attica.html</string>
+    <string name="geo_telaro">geo:0,0?q= Telaro</string>
+    <string name="link_telaro">https://www.tripadvisor.co.uk/Restaurant_Review-g189400-d10595742
+        -Reviews-Telaro-Athens_Attica.html</string>
     <string name="place_telaro">Telaro</string>
-    <string name="place_trata">Trata Fish Tavern</string>
+
     <string name="info_trata">Trata is a traditional fish tavern placed in the heart of athens</string>
-    <string name="geo_trata">geo:0,0?q= Trata, Nikitara, Athina 106 78, Greece</string>
     <string name="phone_trata">+30 21 0383 8531</string>
-    <string name="link_trata">https://www.tripadvisor.co.uk/Restaurant_Review-g189400-d2580508-Reviews-Trata_Fish_Tavern-Athens_Attica.html</string>
-    <string name="place_sushimou">Sushimou</string>
+    <string name="geo_trata">geo:0,0?q= Trata, Nikitara, Athina 106 78, Greece</string>
+    <string name="link_trata">https://www.tripadvisor.co.uk/Restaurant_Review-g189400-d2580508
+        -Reviews-Trata_Fish_Tavern-Athens_Attica.html</string>
+    <string name="place_trata">Trata Fish Tavern</string>
+
     <string name="info_sushimou">Sushi, Japanese, Seafood Restaurant</string>
-    <string name="geo_sushimou">geo:0,0?q= Sushimou, Skoufou 6, Athina 105 57, Greece</string>
-    <string name="link_sushimou">https://www.facebook.com/ToSushiMou/</string>
     <string name="phone_sushimou">+30 21 1407 8457</string>
-    <string name="info_vassilenas">From Thanasis Vassilenas’ humble taverna, born in the impoverished neighbourhoods of 1920s Piraeus to a modern, cosmopolitan restaurant in the heart of Athens on Vrasida Street. A culinary story that spans one hundred years. A journey filled with the memories and flavours of family recipes that continue to inspire our cuisine today.</string>
-    <string name="geo_vassilenas">geo:0,0?q= Vassilenas - Βασίλαινας, Vrasida 13, Athina 115 28, Greece</string>
-    <string name="link_vassilenas">https://www.vassilenas.gr/en/</string>
+    <string name="geo_sushimou">geo:0,0?q= Sushimou</string>
+    <string name="link_sushimou">https://www.facebook.com/ToSushiMou/</string>
+    <string name="place_sushimou">Sushimou</string>
+
+    <string name="info_vassilenas">From Thanasis Vassilenas’ humble taverna, born in the
+        impoverished neighbourhoods of 1920s Piraeus to a modern, cosmopolitan restaurant in the
+        heart of Athens on Vrasida Street. A culinary story that spans one hundred years. A journey
+        filled with the memories and flavours of family recipes that continue to inspire our cuisine
+        today.</string>
     <string name="phone_vassilenas">+30 21 0721 0501</string>
+    <string name="geo_vassilenas">geo:0,0?q= Vassilenas - Βασίλαινας</string>
+    <string name="link_vassilenas">https://www.vassilenas.gr/en/</string>
     <string name="place_vassilenas">Vassilenas</string>
-    <string name="place_ifeel">iFeel Cafe Restaurant</string>
-    <string name="info_ifeel">Romantic, Child-friendly, Business meetings, Kids, Special Occasion Dining, Bar Scene, Local cuisine</string>
+
+    <string name="info_ifeel">Romantic, Child-friendly, Business meetings, Kids, Special Occasion
+        Dining, Bar Scene, Local cuisine</string>
+    <string name="phone_ifeel">+30 21 0323 2244</string>
     <string name="geo_ifeel">geo:0,0?q= iFeel, Karaiskaki 33, Athina 105 54, Greece</string>
     <string name="link_ifeel">http://www.ifeelathens.com/</string>
-    <string name="phone_ifeel">+30 21 0323 2244</string>
+    <string name="place_ifeel">iFeel Cafe Restaurant</string>
+
+
+    <!-- Hotels Places -->
+
+    <string name="info_grande_bretagne">A local institution, this is the grande dame of Athenian
+        hotels. Whenever heads of state and Hollywood stars come to the Greek capital, this is where
+        they stay. Glamorous rooms, gracious service, an opulent spa and superb rooftop dining have
+        earned the ‘GB’ a place among the world’s best hotels.</string>
+    <string name="phone_grande_bretagne">+30 21 0333 0000</string>
+    <string name="geo_grande_bretagne">geo:0,0?q= Hotel Grande Bretagne, a Luxury Collection Hotel,
+        Athens</string>
+    <string name="link_grande_bretagne">https://www.starwoodhotels.com/luxury/property/
+        overview/index.html?propertyID=101</string>
+    <string name="place_grande_bretagne">Grande Bretagne</string>
+
+    <string name="info_king_george">The King George, a former royal residence, stands in the heart
+        of Athens with splendid views to the Acropolis,sea and National Gardens. This boutique hotel
+        first opened in 1936 and has since pampered VIPS including Maria Callas, Frank Sinatra and
+        Marilyn Monroe in its 102 rooms and suites. </string>
+    <string name="phone_king_george">+30 21 0322 2210</string>
+    <string name="geo_king_george">geo:0,0?q= King George, a Luxury Collection Hotel, Athens</string>
+    <string name="link_king_george">https://www.starwoodhotels.com/luxury/property/overview/
+        index.html?propertyID=3929</string>
+    <string name="place_king_george">King George</string>
+
+    <string name="info_herodion_hotel">This family-run, luxury boutique hotel sits in the shadow of
+        the Acropolis and the Acropolis Museum, taking full advantage of the view from its rooms and
+        at its acclaimed rooftop bar and restaurant.</string>
+    <string name="phone_herodion_hotel">+30 21 0923 6832</string>
+    <string name="geo_herodion_hotel">geo:0,0?q= Herodion Hotel</string>
+    <string name="link_herodion_hotel">https://www.herodion.gr/en</string>
+    <string name="place_herodion_hotel">Herodion Hotel</string>
+
+    <string name="info_hilton">This well-established luxury hotel rises above an Athens\' main
+        crossroad, boasting one of the best urban panoramic views from its rooms as well as its
+        popular rooftop bar and restaurant.</string>
+    <string name="phone_hilton">+30 21 0728 1000</string>
+    <string name="geo_hilton">geo:0,0?q= Hilton Athens</string>
+    <string name="link_hilton">http://www3.hilton.com/en/hotels/greece/hilton-athens-ATHHITW/index
+        .html?WT.mc_id=zELWAKN0EMEA1HI2DMH3LocalSearch4DGGenericx6ATHHITW</string>
+    <string name="place_hilton">Hilton Athens</string>
+    
+    <string name="info_st_george_lycabettus">One of the top luxury boutique stays in Athens,
+        centrally located in posh Kolonaki, with views of the Acropolis and Lycabettus Hill. The
+        hotel sets itself apart by offering unique amenities including a cinema, art gallery and
+        yoga sessions. </string>
+    <string name="phone_st_george_lycabettus"> +30 21 0741 6000</string>
+    <string name="geo_st_george_lycabettus">geo:0,0?q= St George Lycabettus Hotel</string>
+    <string name="link_st_george_lycabettus">https://www.sglycabettus.gr/</string>
+    <string name="place_st_george_lycabettus">St George Lycabettus Hotel</string>
+
 </resources>

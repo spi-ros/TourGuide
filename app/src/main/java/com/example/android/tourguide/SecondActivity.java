@@ -36,16 +36,15 @@ public class SecondActivity extends AppCompatActivity {
         if (photoIntent != null) {
             intentString = Objects.requireNonNull(photoIntent.getExtras()).getString("testString");
         }
-
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public class GalleryAdapter extends BaseAdapter {
 
-        Display display = ((WindowManager) Objects.requireNonNull(getSystemService(WINDOW_SERVICE))).getDefaultDisplay();
+        Display display = ((WindowManager) Objects.requireNonNull(getSystemService(WINDOW_SERVICE)))
+                .getDefaultDisplay();
         int orientation = display.getOrientation();
         private Context mContext;
-        private int fake = 0;
         private Integer[] acropolisGallery = {
                 R.drawable.acropolis_gallery_photo0, R.drawable.acropolis_gallery_photo1
         };
@@ -222,9 +221,7 @@ public class SecondActivity extends AppCompatActivity {
                     startActivity(getIntent());
                 }
             });
-
             return imageView;
-
         }
     }
 }

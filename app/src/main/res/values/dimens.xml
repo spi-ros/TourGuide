@@ -6,4 +6,6 @@
     <dimen name="elevation_12">12dp</dimen>
     <dimen name="elevation_24">24dp</dimen>
     <dimen name="elevation_6">6dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
 </resources>
