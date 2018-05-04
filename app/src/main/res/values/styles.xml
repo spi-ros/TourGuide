@@ -8,4 +8,35 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="general_textViews">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/padding_16</item>
+        <item name="android:paddingLeft">@dimen/padding_16</item>
+        <item name="android:paddingRight">@dimen/padding_16</item>
+    </style>
+
+    <style name="place_textView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignBottom">@id/place_image_view</item>
+        <item name="android:paddingBottom">@dimen/padding_8</item>
+        <item name="android:paddingLeft">@dimen/padding_16</item>
+        <item name="android:textColor">@color/colorPlaceTextView</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="place_imageView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_160</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="info_textView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_16</item>
+    </style>
 </resources>

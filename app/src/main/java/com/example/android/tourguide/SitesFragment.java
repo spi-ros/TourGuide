@@ -1,6 +1,5 @@
 package com.example.android.tourguide;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,7 +24,7 @@ public class SitesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         final View rootView = inflater.inflate(R.layout.recycler, container, false);
 
         final ArrayList<Place> places = new ArrayList<>();
@@ -62,7 +60,6 @@ public class SitesFragment extends Fragment {
                 getString(R.string.phone_zeus), getString(R.string.tag_fragmentS),
                 getString(R.string.link_zeus), getString(R.string.sites_tag_6)));
 
-        // Sort places Alphabetically by Age
         Collections.sort(places, new Comparator<Place>() {
             @Override
             public int compare(Place p1, Place p2) {
@@ -75,7 +72,7 @@ public class SitesFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(this, places);
+        PlaceAdapter adapter = new PlaceAdapter(this, places);
 
         recyclerView.setAdapter(adapter);
 

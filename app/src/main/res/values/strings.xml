@@ -187,4 +187,22 @@
     <string name="link_st_george_lycabettus">https://www.sglycabettus.gr/</string>
     <string name="place_st_george_lycabettus">St George Lycabettus Hotel</string>
 
+    <string name="hospitals">Hospitals</string>
+    <string name="hospital_laiko">Laikο General Hospital of Athens</string>
+    <string name="hospital_gennimatas">General Hospital of Athens \"G. Gennimatas\"</string>
+    <string name="hospital_ippokrateio">\"Ippokrateio\" General Hospital of Athens</string>
+    <string name="hospital_evaggelismos">Evaggelismos General Hospital</string>
+
+    <string name="pharmacies">Pharmacies</string>
+    <string name="pharmacy_korres">Korres Pharmacy</string>
+    <string name="pharmacy_mpakakos">Georgios Mpakakos</string>
+    <string name="pharmacy_acropolis">Acropolis_Pharmacy</string>
+    <string name="pharmacy_athens_city">Athens City Pharmacy</string>
+
+    <string name="transport">Transport</string>
+    <string name="athens_airport_taxi">Athens Airport Taxi</string>
+    <string name="taxi_transfer_athens">Taxi Transfer Athens</string>
+    <string name="CitySightSeeing_athens">CitySightSeeing Athens</string>
+    <string name="public_bus_service">Public Bus Service</string>
+
 </resources>
