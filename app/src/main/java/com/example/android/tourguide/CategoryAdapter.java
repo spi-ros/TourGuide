@@ -1,27 +1,30 @@
 package com.example.android.tourguide;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[]{"Sites", "Food", "Hotels", "General info"};
+    Context  context;
 
-    public CategoryAdapter(FragmentManager fragmentManager) {
+    public CategoryAdapter(FragmentManager fragmentManager, Context mContext) {
         super(fragmentManager);
+        context = mContext;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new SitesFragment();
-        } else if (position == 1) {
-            return new FoodFragment();
-        } else if (position == 2) {
-            return new HotelsFragment();
-        } else {
-            return new GeneralInfoFragment();
+        switch (position) {
+            case 0:
+                return new SitesFragment();
+            case 1:
+                return new FoodFragment();
+            case 2:
+                return new HotelsFragment();
+            default:
+                return new GeneralInfoFragment();
         }
     }
 
@@ -32,6 +35,16 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabTitles[position];
+        switch (position) {
+            case 0:
+                return context.getString(R.string.sites);
+            case 1:
+                return context.getString(R.string.food);
+            case 2:
+                return context.getString(R.string.hotels);
+            case 3:
+                return context.getString(R.string.general_info);
+        }
+        return null;
     }
 }

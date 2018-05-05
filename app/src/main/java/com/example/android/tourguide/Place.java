@@ -12,22 +12,22 @@ public class Place {
 
     private String mPhoneNumber;
 
-    private String mTag;
+    private String mFragmentTag;
 
     private String mLink;
 
-    private String mGalleryTag;
+    private String mAssistTag;
 
     public Place(String title, String information, int photo, String location,
-                 String phoneNumber, String tag, String link, String galleryTag) {
+                 String phoneNumber, String fragmentTag, String link, String assistTag) {
         mTitle = title;
         mInformation = information;
         mPhoto = photo;
         mLocation = location;
         mPhoneNumber = phoneNumber;
-        mTag = tag;
+        mFragmentTag = fragmentTag;
         mLink = link;
-        mGalleryTag = galleryTag;
+        mAssistTag = assistTag;
     }
 
     public String getTitle() {
@@ -50,16 +50,16 @@ public class Place {
         return mPhoneNumber;
     }
 
-    public String getTag() {
-        return mTag;
+    public String getFragmentTag() {
+        return mFragmentTag;
     }
 
     public String getLink() {
         return mLink;
     }
 
-    public String getGalleryTag() {
-        return mGalleryTag;
+    public String getAssistTag() {
+        return mAssistTag;
     }
 }
 

@@ -30,17 +30,17 @@ public class GeneralInfoFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<>();
 
-        places.add(new Place(getString(R.string.hospitals), "nought",
-                R.drawable.red_cross, "nought", "nought",
-                getString(R.string.tag_fragmentG), "nought", getString(R.string.generalInfo_tag_1)));
+        places.add(new Place(getString(R.string.hospitals), getString(R.string.nought),
+                R.drawable.red_cross, getString(R.string.nought), getString(R.string.nought),
+                getString(R.string.tag_fragmentG), getString(R.string.nought), getString(R.string.generalInfo_tag_1)));
 
-        places.add(new Place(getString(R.string.pharmacies), "nought",
-                R.drawable.pharmacy, "nought", "nought",
-                getString(R.string.tag_fragmentG), "nought", getString(R.string.generalInfo_tag_2)));
+        places.add(new Place(getString(R.string.pharmacies), getString(R.string.nought),
+                R.drawable.pharmacy, getString(R.string.nought), getString(R.string.nought),
+                getString(R.string.tag_fragmentG), getString(R.string.nought), getString(R.string.generalInfo_tag_2)));
 
-        places.add(new Place(getString(R.string.transport), "nought",
-                R.drawable.transport, "nought", "nought",
-                getString(R.string.tag_fragmentG), "nought", getString(R.string.generalInfo_tag_3)));
+        places.add(new Place(getString(R.string.transport), getString(R.string.nought),
+                R.drawable.transport, getString(R.string.nought), getString(R.string.nought),
+                getString(R.string.tag_fragmentG), getString(R.string.nought), getString(R.string.generalInfo_tag_3)));
 
         Collections.sort(places, new Comparator<Place>() {
             @Override
@@ -54,7 +54,7 @@ public class GeneralInfoFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        PlaceAdapter adapter = new PlaceAdapter(this, places);
+        PlaceAdapter adapter = new PlaceAdapter(this, places, getContext());
 
         recyclerView.setAdapter(adapter);
 

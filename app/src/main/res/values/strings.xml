@@ -177,7 +177,7 @@
     <string name="link_hilton">http://www3.hilton.com/en/hotels/greece/hilton-athens-ATHHITW/index
         .html?WT.mc_id=zELWAKN0EMEA1HI2DMH3LocalSearch4DGGenericx6ATHHITW</string>
     <string name="place_hilton">Hilton Athens</string>
-    
+
     <string name="info_st_george_lycabettus">One of the top luxury boutique stays in Athens,
         centrally located in posh Kolonaki, with views of the Acropolis and Lycabettus Hill. The
         hotel sets itself apart by offering unique amenities including a cinema, art gallery and
@@ -187,22 +187,64 @@
     <string name="link_st_george_lycabettus">https://www.sglycabettus.gr/</string>
     <string name="place_st_george_lycabettus">St George Lycabettus Hotel</string>
 
+
+    <!-- Hospitals -->
     <string name="hospitals">Hospitals</string>
+
     <string name="hospital_laiko">Laikο General Hospital of Athens</string>
-    <string name="hospital_gennimatas">General Hospital of Athens \"G. Gennimatas\"</string>
+    <string name="geo_laiko_hospital">geo:0,0?q= Laikο General Hospital of Athens</string>
+
     <string name="hospital_ippokrateio">\"Ippokrateio\" General Hospital of Athens</string>
+    <string name="geo_ippokrateio_hospital">geo:0,0?q= \"Ippokrateio\" General Hospital of Athens</string>
+
     <string name="hospital_evaggelismos">Evaggelismos General Hospital</string>
+    <string name="geo_evaggelismos_hospital">geo:0,0?q= Evaggelismos General Hospital</string>
 
+    <string name="hospital_gennimatas">General Hospital of Athens \"G. Gennimatas\"</string>
+    <string name="geo_genimatas_hospital">geo:0,0?q= General Hospital of Athens "G. Gennimatas"</string>
+
+
+    <!-- Pharmacies -->
     <string name="pharmacies">Pharmacies</string>
-    <string name="pharmacy_korres">Korres Pharmacy</string>
-    <string name="pharmacy_mpakakos">Georgios Mpakakos</string>
-    <string name="pharmacy_acropolis">Acropolis_Pharmacy</string>
-    <string name="pharmacy_athens_city">Athens City Pharmacy</string>
 
+    <string name="pharmacy_korres">Korres Pharmacy</string>
+    <string name="geo_korres_pharmacy">geo:0,0?q= Korres Pharmacy, Eratosthenous ke Ivikou,
+        Athina 116 35, Greece</string>
+
+    <string name="pharmacy_mpakakos">Georgios Mpakakos</string>
+    <string name="geo_mpakakos_pharmacy">geo:0,0?q= Georgios Mpakakos ΜΠΑΚΆΚΟΣ ΓΕΏΡΓΙΟΣ</string>
+
+    <string name="pharmacy_acropolis">Acropolis_Pharmacy</string>
+    <string name="geo_acropolis_pharmacy">geo:0,0?q= Ακρόπολις Φαρμακείο</string>
+
+
+    <string name="pharmacy_athens_city">Athens City Pharmacy</string>
+    <string name="geo_athensCity_pharmacy">geo:0,0?q=  Themidos 1, Athina 105 54, Greece</string>
+
+
+    <!-- Transport -->
     <string name="transport">Transport</string>
+
     <string name="athens_airport_taxi">Athens Airport Taxi</string>
+    <string name="phone_athensAirport_taxi">tel: +30 21 1800 9110</string>
+
+
     <string name="taxi_transfer_athens">Taxi Transfer Athens</string>
+    <string name="phone_transferAthens_taxi">tel: +30 698 400 0898</string>
+
+
     <string name="CitySightSeeing_athens">CitySightSeeing Athens</string>
+    <string name="link_citySightSeeing">https://www.citysightseeing.gr/</string>
+
+
     <string name="public_bus_service">Public Bus Service</string>
+    <string name="link_public_bus">http://www.oasa.gr/?lang=en</string>
+
+    <!-- Other Strings -->
+    <string name="sites">Sites</string>
+    <string name="food">Food</string>
+    <string name="hotels">Hotels</string>
+    <string name="general_info">General Info</string>
+    <string name="nought">nought</string>
 
 </resources>
