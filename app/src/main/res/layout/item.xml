@@ -1,48 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_8"
+        app:cardBackgroundColor="@color/card_view_color"
+        app:cardCornerRadius="@dimen/padding_4"
+        app:cardElevation="@dimen/elevation_6">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/person_photo"
-                android:layout_width="88dp"
-                android:layout_height="88dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="16dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/person_name"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/place_image_view"
+                    style="@style/place_imageView" />
+
+                <TextView
+                    android:id="@+id/place_text_view"
+                    style="@style/place_textView"
+                    tools:text="ena" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/hidden_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/person_photo"
-                android:textSize="30sp"
-                tools:text="ena"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/person_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/person_name"
-                android:textSize="30sp"
-                android:layout_toRightOf="@+id/person_photo"
-                tools:text="dyo"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingTop="@dimen/padding_16">
 
-        </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/map_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
+                    <ImageView
+                        android:id="@+id/phone_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/gallery_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/link_image_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/info_text_view"
+                    style="@style/info_textView"
+                    tools:text="duo" />
+
+                <TextView
+                    android:id="@+id/general_text_view_1"
+                    style="@style/general_textViews"
+                    tools:text="duo" />
+
+                <TextView
+                    android:id="@+id/general_text_view_2"
+                    style="@style/general_textViews"
+                    tools:text="duo" />
+
+                <TextView
+                    android:id="@+id/general_text_view_3"
+                    style="@style/general_textViews"
+                    tools:text="duo" />
+
+                <TextView
+                    android:id="@+id/general_text_view_4"
+                    style="@style/general_textViews"
+                    tools:text="duo" />
+            </LinearLayout>
+        </LinearLayout>
     </android.support.v7.widget.CardView>
-
-</RelativeLayout>
+</LinearLayout>

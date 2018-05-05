@@ -1,6 +1,7 @@
 package com.example.android.tourguide;
 
-import android.graphics.Color;
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-
-        tabLayout.setBackgroundColor(Color.parseColor("#FC9D9A"));
-        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#F06292"));
+        tabLayout.setBackgroundResource(R.color.tabLayout_backGround_color);
+        tabLayout.setSelectedTabIndicatorColor(getColor(R.color.tab_indicator));
     }
 }
